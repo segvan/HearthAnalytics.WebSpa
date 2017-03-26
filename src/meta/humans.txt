@@ -1,0 +1,11 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# AUTHOR
+
+  Sergii Trotsenko
+
+# TECHNOLOGY COLOPHON
+
+  HTML5, CSS3, Bootstrap
+  Angular2, TypeScript, Webpack
