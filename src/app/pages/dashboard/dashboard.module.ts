@@ -6,9 +6,9 @@ import { NgaModule } from '../../theme/nga.module';
 import { Dashboard } from './dashboard.component';
 import { routing }       from './dashboard.routing';
 
-import { LargeButtons } from './largeButtons';
-import { PieChart } from './pieChart';
-import { TrafficChart } from './trafficChart';
+import { LargeButtons } from './largeButtons/largeButtons.component';
+import { PieChart } from './pieChart/pieChart.component';
+import { TrafficChart } from './trafficChart/trafficChart.component';
 import { PieChartService } from './pieChart/pieChart.service';
 import { TrafficChartService } from './trafficChart/trafficChart.service';
 
