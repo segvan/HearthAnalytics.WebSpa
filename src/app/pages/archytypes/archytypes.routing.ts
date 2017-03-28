@@ -1,8 +1,8 @@
 import { Routes, RouterModule }  from '@angular/router';
 
 import { ArchytypesComponent } from './archytypes.component';
-import { MetaArchytypesComponent } from './components/metaArchytypes/metaArchytypes.component';
-import { ArchiveArchytypesComponent } from './components/archiveArchytypes/archiveArchytypes.component';
+import { MetaArchytypesComponent } from './metaArchytypes/metaArchytypes.component';
+import { ArchiveArchytypesComponent } from './archiveArchytypes/archiveArchytypes.component';
 
 // noinspection TypeScriptValidateTypes
 const routes: Routes = [
