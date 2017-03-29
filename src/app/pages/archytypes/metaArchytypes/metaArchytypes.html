@@ -4,19 +4,27 @@
         <div class="horizontal-scroll">
             <table class="table table-hover">
                 <thead>
-                <tr class="black-muted-bg">
-                <th class="browser-icons"></th>
+                <tr class="black-muted-bg">                
+                <th class="icon-column"></th>
                 <th>Class</th>
                 <th>Archytype</th>
                 <th>Description</th>
+                <th class="buttons-column"></th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr *ngFor="let item of archytypes" class="no-top-border">
-                <td> <img src="assets/img/app/classes/{{ item.classId }}.png" width="20" height="20"></td> 
-                <td ngClass="nowrap">{{item.classId}}</td>
+                <td class="icon-column"> <img src="assets/img/app/classes/{{ item.class.classTypeEnum }}.png"></td> 
+                <td ngClass="nowrap">{{item.class.name}}</td>
                 <td>{{item.name}}</td>
                 <td>{{item.description}}</td>
+                <td class="buttons-column">
+                    <div class="row icons-list primary">
+                        <div class="col-xlg-4 col-xl-4 col-lg-4 col-sm-4 col-xs-4"><i class="ion-edit"></i></div>
+                        <div class="col-xlg-4 col-xl-4 col-lg-4 col-sm-4 col-xs-4"><i class="ion-thumbsdown"></i></div>
+                        <div class="col-xlg-4 col-xl-4 col-lg-4 col-sm-4 col-xs-4"><i class="ion-close"></i></div>
+                    </div>
+                </td>
                 </tr>
                 </tbody>
             </table>

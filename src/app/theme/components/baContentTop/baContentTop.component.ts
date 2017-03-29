@@ -10,11 +10,13 @@ import {GlobalState} from '../../../global.state';
 export class BaContentTop {
 
   public activePageTitle:string = '';
+  public activePageParentTitle:string='';
 
   constructor(private _state:GlobalState) {
     this._state.subscribe('menu.activeLink', (activeLink) => {
       if (activeLink) {
         this.activePageTitle = activeLink.title;
+        this.activePageParentTitle = activeLink.parentTitle;
       }
     });
   }

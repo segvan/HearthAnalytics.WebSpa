@@ -80,7 +80,7 @@ export const PAGES_MENU = [
             path: 'archiveArchytypes',
             data: {
               menu: {
-                title: 'Archive',
+                title: 'Archive', 
               }
             }
           }

@@ -1,3 +1,5 @@
+@import '/conf/conf';
+
 .table {
   margin-bottom: 0px;
   & > thead {
@@ -8,7 +10,7 @@
         &:first-child {
           text-align: center;
         }
-        &:last-child {
+        &:last-child { 
           padding-right: 16px;
         }
       }
@@ -20,7 +22,7 @@
         padding-top: 1px;
       }
       & > td {
-        padding: 0px 8px;
+        padding: 0px 12px;
         line-height: 35px;
         border-top: 1px solid $border-light;
         &:first-child {
@@ -106,8 +108,12 @@ tr.editable-row {
   }
 }
 
-.browser-icons {
+.icon-column {
   width: 41px;
+  img {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .st-sort-ascent, .st-sort-descent {
@@ -339,4 +345,40 @@ th {
 
 .table-responsive {
   margin-top: 10px;
+}
+
+.buttons-column{
+  width: 90px;  
+}
+
+@mixin icon-hover($color) {
+  i:hover {
+    color: $color;
+  }
+}
+
+.icons-list {
+  & > div {
+    text-align: center;
+  }
+  i {
+    font-weight: $font-normal;
+    font-size: 14px;
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+  }
+
+  &.primary {
+    @include icon-hover($primary);
+  }
+  &.success {
+    @include icon-hover($success);
+  }
+  &.warning {
+    @include icon-hover($warning);
+  }
+  &.danger {
+    @include icon-hover($danger);
+  }
 }

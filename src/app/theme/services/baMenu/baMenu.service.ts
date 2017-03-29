@@ -88,6 +88,10 @@ export class BaMenuService {
       item.skip = true;
     }
 
+    if(parent && parent.title){
+      item.parentTitle = parent.title;
+    }
+
     // we have to collect all paths to correctly build the url then
     if (Array.isArray(item.route.path)) {
       item.route.paths = item.route.path;
