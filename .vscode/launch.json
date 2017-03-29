@@ -6,6 +6,7 @@
       "type": "chrome",
       "request": "launch",
       "url": "http://localhost:3000/*",
+      "userDataDir": "${workspaceRoot}/.vscode/chrome",
       "runtimeArgs": [
         "--disable-web-security",
         "--user-data-dir",
@@ -19,6 +20,7 @@
       "type": "chrome",
       "request": "attach",
       "url": "http://localhost:3000/*",
+      "userDataDir": "${workspaceRoot}/.vscode/chrome",
       "port": 9222,
       "sourceMaps": true,
       "webRoot": "${workspaceRoot}"

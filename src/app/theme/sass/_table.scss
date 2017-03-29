@@ -361,13 +361,20 @@ th {
   & > div {
     text-align: center;
   }
-  i {
+  i.control {
     font-weight: $font-normal;
     font-size: 14px;
     padding: 0px;
     margin: 0px;
     cursor: pointer;
   }
+  i.addCtrl {
+    font-weight: $font-normal;
+    font-size: 23px;
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+  }  
 
   &.primary {
     @include icon-hover($primary);
