@@ -1,7 +1,7 @@
-import {ClassType} from './classType';
+import { ClassType } from './classType';
 
-export class Archytype {    
-    class:ClassType;
+export class Archytype {
+    class: ClassType;
     name: string;
     description: string;
     created: Date;

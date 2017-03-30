@@ -17,6 +17,7 @@ import { AppState, InternalStateType } from './app.service';
 import { GlobalState } from './global.state';
 import { NgaModule } from './theme/nga.module';
 import { PagesModule } from './pages/pages.module';
+import { ArchytypesService } from './services';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -50,7 +51,8 @@ export type StoreType = {
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
-    APP_PROVIDERS
+    APP_PROVIDERS,
+    ArchytypesService
   ]
 })
 

@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {Archytype} from '../../../entities';
-import {ClassType} from '../../../entities';
-import {ArchytypesService} from '../../../services';
+import { Component, OnInit } from '@angular/core';
+import { Archytype } from '../../../entities';
+import { ClassType } from '../../../entities';
+import { ArchytypesService } from '../../../services';
 
 @Component({
   selector: 'metaArchytypes',
@@ -23,25 +23,19 @@ export class MetaArchytypesComponent {
     this.getArchytypes();
   }
 
-  onAdd(event: any) {
-    event.preventDefault();
-    event.stopPropagation();
+  onAdd() {
     this.newRow = new Archytype();
     this.newRow.class = new ClassType();
     this.newRow.class.classTypeEnum = 1;
     this.newRow.class.name = "Druid";
   }
 
-  onSave(event: any) {
-    event.preventDefault();
-    event.stopPropagation();
+  onSave() {
     this.archytypes.unshift(this.newRow);
     this.newRow = null;
   }
 
-  onCancel(event: any) {
-    event.preventDefault();
-    event.stopPropagation();
+  onCancel() {
     this.newRow = null;
   }
 }

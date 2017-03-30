@@ -97,7 +97,7 @@ export const PAGES_MENU = [
             order: 40,
           }
         }
-      },          
+      },
       {
         path: '',
         data: {

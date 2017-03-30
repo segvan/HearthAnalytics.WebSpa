@@ -1,5 +1,5 @@
 export class ClassType {
     id: number;
-    name: string;    
+    name: string;
     classTypeEnum: number;
 }
