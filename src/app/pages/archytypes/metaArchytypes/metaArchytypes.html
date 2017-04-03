@@ -6,7 +6,7 @@
                 <thead>
                 <tr class="black-muted-bg">                
                 <th class="icon-column">
-                    <div *ngIf="!newRow" title="Add Archytype" class="icons-list success" (click)="onAdd($event)">
+                    <div *ngIf="!newRow" title="Add Archytype" class="icons-list success" (click)="addNew()">
                         <i class="ion-android-add-circle addCtrl"></i>
                     </div>
                 </th>
@@ -20,20 +20,16 @@
                 <tr *ngIf="newRow" class="no-top-border">
                     <td class="icon-column"></td> 
                     <td ngClass="">
-                         <select [(ngModel)]="newRow.class.classTypeEnum" class="form-control" id="exampleSelect1">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                         <select [(ngModel)]="newRow.class" class="form-control" id="classes-select">
+                            <option *ngFor="let class of classes" [ngValue]="class">{{class.name}}</option>
                         </select>
                     </td>
                     <td><input [(ngModel)]="newRow.name" type="text" class="form-control"></td>
                     <td><input [(ngModel)]="newRow.description" type="text" class="form-control"></td>
                     <td class="buttons-column">
                         <div class="row icons-list primary">
-                            <div (click)="onSave($event)" title="Save" class="col-sm-4 col-xs-12"><i class="ion-checkmark-round control"></i></div>
-                            <div (click)="onCancel($event)" title="Cancel" class="col-sm-4 col-xs-12"><i class="ion-close-round control"></i></div>
+                            <div (click)="saveNew()" title="Save" class="col-sm-4 col-xs-12"><i class="ion-checkmark-round control"></i></div>
+                            <div (click)="cancelNew()" title="Cancel" class="col-sm-4 col-xs-12"><i class="ion-close-round control"></i></div>
                         </div>
                     </td>
                 </tr>    
@@ -45,8 +41,8 @@
                     <td class="buttons-column">
                         <div class="row icons-list primary">
                             <div title="Edit" class="col-sm-4 col-xs-12"><i class="ion-edit control"></i></div>
-                            <div title="Archive" class="col-sm-4 col-xs-12"><i class="ion-archive control"></i></div>
-                            <div title="Remove" class="col-sm-4 col-xs-12"><i class="ion-close-round control"></i></div>
+                            <div (click)="archive(item)" title="Archive" class="col-sm-4 col-xs-12"><i class="ion-archive control"></i></div>
+                            <div (click)="remove(item)" title="Remove" class="col-sm-4 col-xs-12"><i class="ion-close-round control"></i></div>
                         </div>
                     </td>
                 </tr>
